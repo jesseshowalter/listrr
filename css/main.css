@@ -1,0 +1,346 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+
+
+
+/*------------------*/
+/*General Styles*/
+/*------------------*/
+
+body{
+	background: #EFEDDF;
+	font-family: 'Quicksand', sans-serif;
+	font-size:17px;
+	text-transform: uppercase;
+}
+
+main{
+	width: 100%;
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 60px 20px;
+	text-align: center;
+}
+
+nav{
+	width:100%;
+	background: #FFF;
+	border-bottom:1px solid #CCC;
+	position: fixed;
+	top:0;
+	padding:20px;
+}
+
+#admin-nav{
+	float:right;
+	margin-top:10px;
+}
+#admin-nav li{
+	display:inline-block;
+	margin-left:20px;
+}
+#admin-nav li:first-child{
+	margin-left:0;
+}
+#admin-nav li a:link, #admin-nav li a:visited{
+	text-decoration: none;
+	color:#666;
+	transition: all 0.3s;
+}
+#admin-nav li a:hover, #admin-nav li a:active{
+	color:#39D1B4;
+	transition: all 0.3s;
+}
+
+h1{
+	font-size: 1.6em;
+	font-weight: 600;
+	color:#666;
+	background:url("../img/logo.png") no-repeat top left;
+	background-size: 30px;	
+	padding:2px;
+	padding-left:35px;
+	float:left;
+	transition: all 0.3s;
+}
+h1 a:link, h1 a:visited{
+	color:#666;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+h1 a:hover{
+	color:#CCC;
+	transition: all 0.3s;
+}
+
+
+
+
+/*------------------*/
+/* Form Styles*/
+/*------------------*/
+#task-form{
+	margin: 80px 0 ;
+}
+#task-form input{
+	border:1px solid #CCC;
+	height:80px;
+	width:80%;
+	padding-left:20px;
+	font-size:20px;
+	text-transform: uppercase;
+	color:#666;
+	float:left;
+	font-family: 'Quicksand', sans-serif;
+	transition: all 0.3s;
+}
+#task-form input:focus, #task-form input:active, #task-form button:focus, #task-form button:active{
+	outline-color: #F0553B;
+	outline-width: thin;
+	transition: all 0.3s;
+}
+#task-form button{
+	height:80px;
+	width:19%;
+	border:1px solid #CCC;
+	background:#F0553B;
+	font-size:20px;
+	color:#FFF;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-family: 'Quicksand', sans-serif;
+	transition: all 0.3s;
+	position: relative;
+	border-radius: 6px;
+}
+#task-form button:before{
+	height: 1px;
+	width: 100%;
+	background: #ff8e7b;
+	position: absolute;
+	content: " ";
+	top: 0px;
+	left: 0;
+}
+#task-form button:hover{
+	opacity: 0.8;
+	transition: all 0.3s;
+}
+
+
+
+/*------------------*/
+/* List Styles*/
+/*------------------*/
+#task-container ul{
+	overflow:hidden;
+}
+#task-container .task-headline{
+	display:none;
+	color:#666666;
+	border-bottom:1px solid #C8C7BB;
+	padding-bottom: 20px;
+	margin-bottom:20px;
+	font-size:1.6em;
+	position: relative;
+}
+#task-container .task-headline:before{
+	height: 1px;
+	width: 100%;
+	background: #FFF;
+	position: absolute;
+	content: " ";
+	bottom: 0px;
+	left: 0;
+}
+#task-container .nothing-message{
+	background:url("../img/logo2.png") no-repeat center 20px;
+	height:160px;
+	color:#666;
+	background-size: 15%;
+}
+#task-container li{
+	display:none;
+	float:left;
+	width:49%;
+	overflow: auto;
+	height:auto;
+	min-height:10px;
+	background:#FFF;
+	display: inline-block;
+	padding:20px;
+	border:1px solid #CCC;
+	color:#666;
+	border-top:9px solid #39D1B4;
+	cursor:pointer;
+	margin-bottom:10px;
+	margin-right:2%;
+	transition: all 0.3s;
+	position: relative;
+}
+#task-container li:nth-child(even){
+	margin-right: 0;
+}
+#task-container li:hover{
+	opacity: 0.8;
+	border-top:9px solid #F0553B;
+}
+#task-container p{
+	line-height: 1.6em;
+	text-align: left;
+}
+#task-container li.complete{
+	opacity:0.3;
+	border-top:9px solid #666;
+	transition: all 0.3s;
+
+}
+#task-container li.complete:before{
+	background:url("../img/complete.png") no-repeat;
+	position: absolute;
+	top:5px;
+	right:5px;
+	content: "";
+	width: 55px;
+	height: 55px;
+	background-size: 100%;
+}
+#task-container li.complete:hover{
+	border-top:9px solid #F0553B;
+	opacity:0.6;
+}
+#task-container li.complete p{
+	text-decoration: line-through;
+}
+
+/*-------------------------*/
+/* Secondary Control Styles*/
+/*-------------------------*/
+#controls{
+	display:none;
+	text-align: center;
+	clear:both;
+	margin-top:60px;
+
+	background:#E4E3D5;
+	padding:20px;
+	border:1px solid #c8c7bb;
+}
+#controls p{
+	display:inline-block;
+	color:#666;
+	font-style: italic;
+}
+#controls p:first-child{
+	margin-right:20px;
+}
+#clear-all-tasks{
+	clear:both;
+	margin-top:20px;
+	background:#999;
+	border:none;
+	color:#FFF;
+	padding:10px 20px;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-family: 'Quicksand', sans-serif;
+	transition: all 0.3s;
+}
+#clear-all-tasks:hover{
+	background:#666;
+	transition: all 0.3s;
+}
+
+
+@media (max-width: 600px) {
+
+	h1{
+		display:block;
+		float:none;
+		width:100%;
+		text-align: center;
+		padding-left:0;
+		background-position: center 0;
+		padding-top:40px;
+	}
+	#admin-nav{
+		display:block;
+		float:none;
+		text-align: center;
+	}
+	#admin-nav{
+		margin-top: 20px;
+	}
+
+	#task-form{
+		margin-top:110px;
+	}
+
+	#task-container li, #task-form input, #task-form button{
+		width:100%;
+	}
+	#task-form button{
+		margin-top:20px;
+	}
+
+
+}
+
+
+
+
+
+
+
+
