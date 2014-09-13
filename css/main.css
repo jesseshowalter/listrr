@@ -333,7 +333,9 @@ h1 a:hover{
 	#task-form button{
 		margin-top:20px;
 	}
-
+	#controls p{
+		font-size: 0.8em;
+	}
 
 }
 
