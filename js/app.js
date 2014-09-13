@@ -42,7 +42,7 @@ $(document).ready(function(){
 	
 	// double click to remove
 	$(document).on('dblclick','li',function(){
-		$(this).fadeOut('fast');
+		$(this).remove();
 	});
 
 	// Clear all tasks button
