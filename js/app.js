@@ -5,7 +5,6 @@ $(document).ready(function(){
 
 		// remove nothing message
 		if ('.nothing-message') {
-			// $('.nothing-message').fadeOut('fast');
 			$('.nothing-message').hide('slide',{direction:'left'},300)
 		};
 
