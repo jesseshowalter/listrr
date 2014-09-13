@@ -26,14 +26,6 @@ $(document).ready(function(){
 		$('.task-headline').fadeIn();
 	});
 
-	// use enter to add list items
-	$('input').keyup(function(event){
-		if(event.keyCode == 13) {
-			event.preventDefault();
-			$('button').click();
-		};
-	});
-
 	// mark as complete
 	$(document).on('click','li',function(){
 		$(this).toggleClass('complete');
